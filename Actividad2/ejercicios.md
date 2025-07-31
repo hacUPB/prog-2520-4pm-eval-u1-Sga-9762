@@ -28,5 +28,18 @@ Fin
 ## Diagrama de flujo
 ![Ejercicio2](/Actividad2/images/pseudocode_ejercicio2JAS.jpg)
 
+# Ejercicio 3
+Una empresa importadora desea determinar cuántos dólares puede adquirir con equis cantidad de dinero colombiano. Realice un diagrama de flujo y pseudocódigo que representen el algoritmo para tal fin.
 
+## Pseudocódigo 
+```
+Inicio
+PrecioDolar = 4000
+Leer PesosColombianos
+Adquisicion = PesosColombianos/PrecioDolar
+Mostrar Adquisicion
+Fin
+```
 
+## Diagrama de flujo
+![Ejercicio3](images/pseudocode_ejercicio2JAS.jpg)
