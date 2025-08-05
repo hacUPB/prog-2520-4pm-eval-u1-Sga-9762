@@ -63,3 +63,90 @@ Fin
 
 ## Diagrama de flujo 
 ![Ejercicio 4](images/diagrama_ejercicio4JAS.jpg)
+
+## Ejercicio 2
+Un almacén de ropa tiene una promoción: por compras superiores a $250 000 se les aplicará un descuento de 15%, de caso contrario, sólo se aplicará un 8% de descuento. Realice un algoritmo para determinar el precio final que debe pagar una persona por comprar en dicho almacén y de cuánto es el descuento que obtendrá. Represéntelo mediante el pseudocódigo y el diagrama de flujo.
+
+## Pseudocódigo
+```
+Inicio
+Leer valor_compra
+Si valor_compra > 250000
+dcto = valor_compra*0.15
+Si no
+dcto = valor_compra*0.08
+Fin Si
+ValorFinal = valor_compra - dcto
+Mostrar "Valor a pagar: $", ValorFinal
+Fin
+```
+
+## Diagrama de flujo
+![Ejercicio 5](images/diagrama5_corregidoJAS.jpg)
+
+## Ejercicio 3 
+El director de una escuela está organizando un viaje de estudios, y requiere determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de viajes por el servicio. La forma de cobrar es la siguiente: si son 100 alumnos o más, el costo por cada alumno es de $65.00; de 50 a 99 alumnos, el costo es de $70.00, de 30 a 49, de $95.00, y si son menos de 30, el costo de la renta del autobús es de $4000.00, sin importar el número de alumnos.
+
+## Pseudocódigo
+```
+Inicio
+    Leer ctd_alumnos
+        Si ctd_alumnos > 0
+            Si ctd_alumnos >= 100
+            ValorTotal = 65*ctd_alumnos 
+            Si ctd_alumnos >= 50 
+            ValorTotal = 70*ctd_alumnos
+            Si ctd_alumnos >= 30
+            ValorTotal = 95*ctd_alumnos
+            Si ctd_alumnos < 30
+            ValorTotal = 4000
+        Si no
+            Mostrar "El valor introducido no es válido"
+        Fin Si
+    CobroIndividual = ValorTotal/ctd_alumnos
+    Mostrar "El cobro por alumno es: $", CobroIndividual, "el valor a pagar es: $", ValorTotal
+Fin
+```
+
+## Diagrama de flujo
+![Ejercicio 6](images/diagrama_ejercicio6JAS.jpg)
+
+## Ejercicio 4
+Una tienda de ropa tiene la siguiente promoción: por la compra de tres productos, la prenda de menor valor tiene un 70% de descuento. Calcular cuál fue el descuento aplicado y cuánto debe pagar la persona.
+
+## Pseudocódigo
+```
+Inicio
+    Leer ctd_productos
+    Leer p1, p2, p3
+        Si p1 > 0 y p2 > 0 y p3 > 0
+                Si ctd_productos > 0  
+                        Si ctd_productos = 3
+                            Si p1 < p2 y p1 < p3
+                                dcto = p1*0.7
+                                PrecioFinal = dcto + p2 + p3
+                            Si p2 < p1 y p2 < p3
+                                dcto = p2*0.7
+                                PrecioFinal = dcto + p1 + p3
+                            Si p3 < p2 y p3 < p1
+                                dcto = p3*0.7
+                                PrecioFinal = dcto + p2 + p3
+                            Si no
+                            Precio Final = p1 + p2 + p3
+                        Fin Si
+                        Mostrar PrecioFinal
+                    Si no
+                    Mostrar "Valor introducido es inválido"
+                Fin Si
+            Si no
+            Mostrar "Precio introducido invalido"
+        Fin Si
+    Fin
+```
+
+| PRECIO 1 | PRECIO 2 | PRECIO 3 | 
+|----------|----------|----------|
+| 250000 | 320000 | 330000 | 
+
+
+    
