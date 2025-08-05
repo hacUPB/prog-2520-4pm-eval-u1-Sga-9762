@@ -42,4 +42,24 @@ Fin
 ```
 
 ## Diagrama de flujo
-![Ejercicio3](images/pseudocode_ejercicio2JAS.jpg)
+![Ejercicio3](images/diagrama_ejercicio3JAS.jpg)
+
+# Ejercicios adicionales
+
+## Ejercicio 1
+Realice un algoritmo para determinar cuánto se debe pagar por equis cantidad de lápices considerando que si son 1000 o más el costo es de $85 cada uno; de lo contrario, el precio es de $90. Represéntelo con el pseudocódigo y el diagrama de flujo.
+
+## Pseudocódigo
+```
+Inicio
+Leer ctd_lapices
+Si ctd_lapices >= 1000
+PrecioTotal = 85*ctd_lapices
+Si no
+PrecioTotal = 90*ctd_lapices
+Fin Si
+Fin
+```
+
+## Diagrama de flujo 
+![Ejercicio 4](images/diagrama_ejercicio4JAS.jpg)
