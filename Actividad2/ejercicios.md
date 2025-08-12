@@ -144,9 +144,73 @@ Inicio
     Fin
 ```
 
-| PRECIO 1 | PRECIO 2 | PRECIO 3 | 
-|----------|----------|----------|
-| 250000 | 320000 | 330000 | 
+## Bucles o ciclos
+### Ejercicio 1:
+Se requiere un algoritmo para obtener la suma de diez cantidades, que se leen del teclado, mediante la utilización de un ciclo while. Realice el diagrama de flujo y el pseudocódigo.
+### Pseudocódigo:
+```
+Inicio
+    i = 0
+    suma = 0
+        while i <= 10
+            Leer cantidad
+            i = i + 1
+            suma = suma + cantidad
+        Fin while
+    Mostrar suma
+Fin
+```
+### Diagrama de flujo:
+![Ejemplo 1](images/diagrama_ej1JAS.jpg)
+
+### Ejercicio 2:
+Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10% anual durante 6 años ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? Realice el algoritmo y represente la solución mediante el diagrama de flujo y el pseudocódigo. 
+
+### Pseudocódigo:
+```
+Inicio
+    i = 1
+    Salario = 1500
+    SalarioTotal = 0
+    mientras i <= 6 
+        SalarioAnual = Salario*1,1 -- 100% + 10%
+        Salario = SalarioAnual
+        SalarioTotal = SalarioTotal + SalarioAnual
+        Mostrar SalarioAnual
+        i = i + 1
+    Fin mientras
+    Mostrar SalarioTotal
+Fin
+```
+### Diagrama de flujo:
+![Ejemplo 2](images/diagrama_ej2JAS.jpg)
+
+### Ejercicio 3:
+Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero. Realice el diagrama de flujo y el pseudocódigo.
+
+### Pseudocódigo:
+```
+Inicio
+    c = 0 -- cantidades igual a cero
+    p = 0 -- cantidades mayores que cero
+    m = 0 -- cantidades menores que cero
+    i = 0
+    Leer N
+    mientras i < N
+        i = i + 1
+        Leer ctd
+        si ctd > 0
+            p = m + 1 
+        si ctd = 0 
+            c = c + 1
+        si no
+            m = n + 1
+    Fin mientras
+Fin
+```
+### Diagrama de flujo:
+![Ejercicio 3](images/diagrama_ej3JAS.jpg)
+
 
 
     
