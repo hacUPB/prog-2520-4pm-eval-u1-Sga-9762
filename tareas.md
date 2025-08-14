@@ -38,25 +38,32 @@ Inicio
 Leer N_artcs
 Leer total_artcs
 Leer cuotas
-  Si cuotas <= 36 y total_artcs <= 10000000
-      Si precio_artcs >= 200000
-        pr_dcto = total_artcs*0.15
-        costoidv_artcs = pr_dcto/N_artcs
-        valor_cuota = pr_dcto / (1-(1/(1+0.2))^cuotas)/0.2) -- fórmula del sistema de amortización francés
-      Si precio_artcs > 100000
-        pr_dcto = total_artcs*0.12
-        costoidv_artcs = pr_dcto/N_artcs
-        valor_cuota = pr_dcto / (1-(1/(1+0.2))^cuotas)/0.2) -- fórmula del sistema de amortización francés
-      Si no
-        pr_dcto = total_artcs*0.1
-        costoidv_artcs = pr_dcto/N_artcs
-        valor_cuota = pr_dcto / (1-(1/(1+0.2))^cuotas)/0.2) -- fórmula del sistema de amortización francés
-      Fin Si
-  Fin Si
+saldo = 10000000
+i = 1
+  Mientras i <= cuotas y cuotas <= 36 y cuotas > 0 y total_artcs <= 10000000
+        Si precio_artcs >= 200000
+          i = i + 1
+          pr_dcto = total_artcs*0.15
+          costoidv_artcs = pr_dcto/N_artcs
+          valor_cuota = pr_dcto / (1-(1/(1+0.2))^cuotas)/0.2) -- fórmula del sistema de amortización francés
+          saldo = saldo - valor_cuota
+        Si precio_artcs > 100000
+          i = i + 1
+          pr_dcto = total_artcs*0.12
+          costoidv_artcs = pr_dcto/N_artcs
+          valor_cuota = pr_dcto / (1-(1/(1+0.2))^cuotas)/0.2) -- fórmula del sistema de amortización francés
+          saldo = saldo - valor_cuota
+        Si no
+          i = i + 1
+          pr_dcto = total_artcs*0.1
+          costoidv_artcs = pr_dcto/N_artcs
+          valor_cuota = pr_dcto / (1-(1/(1+0.2))^cuotas)/0.2) -- fórmula del sistema de amortización francés
+          saldo = saldo - valor_cuota
+        Fin Si
+    Fin Si
+  Fin Mientras
 Mostrar pr_dcto
 Mostrar costoidv_artcs
 Mostrar valor_cuota
 Fin
-```
-
 ```
